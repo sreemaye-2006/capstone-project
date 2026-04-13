@@ -1,12 +1,15 @@
-### Admin login
-POST http://localhost:4000/auth/login
+###admin login
+
+###read all users and authors
+GET http://localhost:5000/admin-api/articles
+
+###
+GET http://localhost:5000/admin-api/users
+
+###block or activate user or author
+PATCH http://localhost:5000/admin-api/user/69b38ff5aaa5f2d4d18d0dc9
 Content-Type: application/json
 
 {
-  "email":"admin@mail.com",
-  "password":"admin"
+    "isUserActive":"true"
 }
-
-### Read all USERS & AUTHORS (email)
-
-### Block or Activate User or Author
